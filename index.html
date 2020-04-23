@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Crescere Wordpress</title>
+		<meta charset="UTF-8" />		
+		<script type="text/javascript" src="./engine/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="./engine/funcoes.js"></script>	
+		<link rel="stylesheet" type="text/css" href="./estilos/estilo.css" />
+	</head>
+	<body>
+		<div id="site">
+			<div id="conteudo"></div>
+			<div id="formulario">
+				<fieldset>
+					<legend>Formulário para inserir conteúdo</legend>
+					<form action="" method="post">
+						<label for="tipo">Tipo de Conteúdo:</label>
+						<select id="tipo" name="tipo" onchange="exibirCampos();">
+							<option value="0">-- Selecione o tipo --</option>
+							<option value="1">Parágrafo</option>
+							<option value="2">Imagem</option>
+							<option value="3">Link</option>
+							<option value="4">Campo Texto</option>
+						</select><br/><br/>
+						<div id="divCampoTexto" class="divCampos">
+							<label for="texto">Texto: </label><textarea id="texto" name="texto" rows="10" cols="50"></textarea><br/><br/>
+						</div>
+						<div id="divCamposImagem" class="divCampos">
+							<label for="url_img">URL da Imagem: </label><input type="text" id="url_img" name="url_img" /><br/><br/>				
+							<label for="legenda">Legenda: </label><input type="text" id="legenda" name="legenda" /><br/><br/>
+						</div>
+						<div id="divCamposLink" class="divCampos">
+							<label for="url">URL: </label><input type="text" id="url" name="url" /><br/><br/>				
+							<label for="link">Link: </label><input type="text" id="link" name="link" /><br/><br/>	
+						</div>
+						<div id="divCamposInput" class="divCampos">
+							<label for="label">Label: </label><input type="text" id="label" name="label" /><br/><br/>						
+							<label for="id">ID: </label><input type="text" id="id" name="id" /><br/><br/>						
+						</div>
+						<input type="button" id="limpar" name="limpar" value="Limpar" onclick="limparConteudo();" />
+						<input type="button" id="enviar" name="enviar" value="Enviar" onclick="inserirConteudo();" />
+					</form>
+				</fieldset>
+			</div>
+		</div>
+	</body>
+</html>

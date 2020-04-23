@@ -1,0 +1,39 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+#site{
+	margin:50px 30px 0px 30px;
+}
+
+#conteudo, #formulario{
+	width:49%;
+}
+
+#conteudo{
+	float:left;
+	border-right:2px solid black;
+}
+
+#formulario{
+	float:right;
+}
+
+fieldset{
+	padding:20px 0px 10px 20px;
+}
+
+.divCampos{
+	display:none;
+}
+
+input[type='button']{
+	width:100px;
+	padding:5px;
+	border-radius:10px;
+}
+
+#enviar{
+	margin-left:10px;
+}
